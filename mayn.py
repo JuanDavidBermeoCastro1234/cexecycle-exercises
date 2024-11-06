@@ -1,7 +1,6 @@
+# Ask the user for the maximum power up to which to generate powers of 2
+n = int(input("Enter the maximum power (n): "))
 
-number = int(input("Enter a number to see its multiplication table: "))
-
-
-print(f"\nMultiplication table of {number}:")
-for i in range(1, 11):
-    print(f"{number} x {i} = {number * i}")
+# Generate and display powers of 2 from 2^0 to 2^n
+for i in range(n + 1):
+    print(f"2^{i} = {2 ** i}")
