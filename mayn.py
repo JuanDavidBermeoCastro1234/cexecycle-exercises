@@ -1,8 +1,7 @@
 
-for i in range(1, 11):
-  
-    for j in range(1, 11):
-     
-        print(f"{i * j:3}", end=" ")
+number = int(input("Enter an integer: "))
 
-    print()
+print(f"The divisors of {number} are:")
+for i in range(1, number + 1):
+    if number % i == 0:
+        print(i)
