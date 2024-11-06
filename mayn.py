@@ -1,6 +1,13 @@
-# Ask the user for the maximum power up to which to generate powers of 2
-n = int(input("Enter the maximum power (n): "))
+# Ask the user for two integers
+num1 = int(input("Enter the first integer: "))
+num2 = int(input("Enter the second integer: "))
 
-# Generate and display powers of 2 from 2^0 to 2^n
-for i in range(n + 1):
-    print(f"2^{i} = {2 ** i}")
+# Make sure num1 is the smaller number and num2 is the larger one
+if num1 > num2:
+    num1, num2 = num2, num1  # Swap the values if needed
+
+# Calculate the sum of the numbers between num1 and num2
+sum_result = sum(range(num1 + 1, num2))
+
+# Display the result
+print(f"The sum of the numbers between {num1} and {num2} is: {sum_result}")
