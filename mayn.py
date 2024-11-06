@@ -1,5 +1,11 @@
+n = int(input("Enter the number of terms (n): "))
 
-height = int(input("Height: "))
+pi_estimation = 0
 
-for i in range(1, height + 1):
-    print("*" * i)
+for i in range(n):
+    sign = (-1) ** i
+    pi_estimation += sign / (2 * i + 1)
+
+pi_estimation *= 4
+
+print(f"The estimation of pi with {n} terms is: {pi_estimation}")
